@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/hcso#"
+     xml:base="http://www.example.org/hcso"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/hcso">
+        <rdfs:comment>Advanced OWL 2 ontology for a Healthcare Clinical Information System</rdfs:comment>
+        <rdfs:label>Healthcare Clinical System Ontology (HCSO)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/hcso#belongsToDepartment -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#belongsToDepartment">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Doctor"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Department"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#conductsAppointment -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#conductsAppointment">
+        <owl:inverseOf rdf:resource="http://www.example.org/hcso#consultedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Doctor"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Appointment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#consultedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#consultedBy">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Appointment"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Doctor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#containsMedication -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#containsMedication">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Prescription"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Medication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasAppointment -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#hasAppointment">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Patient"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Appointment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#hasDiagnosis">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#MedicalRecord"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Diagnosis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasMedicalRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#hasMedicalRecord">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Patient"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#MedicalRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#hasTreatment">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Diagnosis"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#prescribes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/hcso#prescribes">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Doctor"/>
+        <rdfs:range rdf:resource="http://www.example.org/hcso#Prescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/hcso#appointmentDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/hcso#appointmentDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Appointment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/hcso#hasAge">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/hcso#hasGender">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/hcso#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/hcso#hasName">
+        <rdfs:domain rdf:resource="http://www.example.org/hcso#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/hcso#Appointment -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Appointment"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Billing -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Billing"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Department -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Department"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Diagnosis -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Diagnosis"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Doctor -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/hcso#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/hcso#Hospital -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Hospital"/>
+    
+
+
+    <!-- http://www.example.org/hcso#LabTest -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#LabTest"/>
+    
+
+
+    <!-- http://www.example.org/hcso#MedicalRecord -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#MedicalRecord"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Medication -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Medication"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Nurse -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/hcso#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/hcso#Patient -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/hcso#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/hcso#Person -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Person"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Prescription -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Prescription"/>
+    
+
+
+    <!-- http://www.example.org/hcso#Treatment -->
+
+    <owl:Class rdf:about="http://www.example.org/hcso#Treatment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/hcso#Appointment_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/hcso#Appointment_001">
+        <rdf:type rdf:resource="http://www.example.org/hcso#Appointment"/>
+        <consultedBy rdf:resource="http://www.example.org/hcso#Dr_Smith"/>
+        <appointmentDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-01T10:30:00</appointmentDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/hcso#Cardiology -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/hcso#Cardiology">
+        <rdf:type rdf:resource="http://www.example.org/hcso#Department"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/hcso#Dr_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/hcso#Dr_Smith">
+        <rdf:type rdf:resource="http://www.example.org/hcso#Doctor"/>
+        <hasGender>Male</hasGender>
+        <hasName>Dr. John Smith</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/hcso#MedicalRecord_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/hcso#MedicalRecord_001">
+        <rdf:type rdf:resource="http://www.example.org/hcso#MedicalRecord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/hcso#Patient_Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/hcso#Patient_Ali">
+        <rdf:type rdf:resource="http://www.example.org/hcso#Patient"/>
+        <hasAppointment rdf:resource="http://www.example.org/hcso#Appointment_001"/>
+        <hasMedicalRecord rdf:resource="http://www.example.org/hcso#MedicalRecord_001"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hasAge>
+        <hasGender>Male</hasGender>
+        <hasName>Ali Rahman</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/hcso#Doctor"/>
+            <rdf:Description rdf:about="http://www.example.org/hcso#Nurse"/>
+            <rdf:Description rdf:about="http://www.example.org/hcso#Patient"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
