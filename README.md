@@ -1,4 +1,4 @@
-# Knowledge Representation Project: Healthcare Clinical Ontology Using OWL 2
+# Knowledge Representation: Healthcare Clinical Ontology Using OWL 2
 
 
 👤 AUTHOR
