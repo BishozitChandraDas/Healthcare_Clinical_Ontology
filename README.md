@@ -5,7 +5,7 @@
 ----------------------    
 - **Bishozit Chandra Das**  
 - Student ID: **VR544246**  
-- MSc in **Artificial Intelligence** at Università degli Studi di Verona  
+- MSc in **Artificial Intelligence** at Università degli Studi di Verona   
 - [BishozitChandraDas](https://github.com/BishozitChandraDas)  
 
 
