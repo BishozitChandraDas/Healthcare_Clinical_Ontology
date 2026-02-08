@@ -40,7 +40,7 @@ The ontology defines the following main concepts:
 - **Person** (Superclass)  
   - Patient  
   - Doctor  
-  - Nurse  
+  - Nurse   
 
 - Disease  
 - Symptom  
