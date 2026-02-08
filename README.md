@@ -19,7 +19,7 @@ It is designed for academic purposes and demonstrates the use of **classes, obje
 
 
 <img width="1024" height="768" alt="Overall Architecture of the Ontology Asserted Hierarchy" src="Overall%20architecture.jpeg" />  
-Figure 1: Overall Architecture of the Ontology Asserted Hierarchy 
+Figure 1: Ontology Asserted Hierarchy 
 
 
 PROJECT STRUCTURE
