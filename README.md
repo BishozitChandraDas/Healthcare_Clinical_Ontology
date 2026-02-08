@@ -24,7 +24,7 @@ Figure 1: Overall Architecture of the Ontology Asserted Hierarchy
 
 PROJECT STRUCTURE
 --------------------
-1. Healthcare_Clinical_Ontology_2.0.owl  → Final OWL ontology file  
+1. Healthcare_Clinical_Ontology_2.0.owl  → Final OWL ontology file   
 
 2. Project Report.pdf                   → Academic project report  
 
