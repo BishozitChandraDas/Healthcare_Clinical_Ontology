@@ -9,7 +9,7 @@
 - [BishozitChandraDas](https://github.com/BishozitChandraDas)  
 
 
-PROJECT DESCRIPTION
+PROJECT DESCRIPTION 
 ----------------------  
 This project presents an advanced **Healthcare Clinical Ontology** developed using **OWL 2** and the **Protégé ontology editor**.  
 The ontology models real-world healthcare concepts and their semantic relationships, enabling structured knowledge representation, interoperability, and logical reasoning.
