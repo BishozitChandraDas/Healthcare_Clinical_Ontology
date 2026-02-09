@@ -53,7 +53,7 @@ The ontology defines the following main concepts:
 - MedicalRecord  
 - Hospital  
 - Department  
-- Billing  
+- Billing   
 
 This class hierarchy ensures semantic clarity and reuse through inheritance.
 
