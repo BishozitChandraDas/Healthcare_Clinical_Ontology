@@ -15,7 +15,7 @@ This project presents an advanced **Healthcare Clinical Ontology** developed usi
 The ontology models real-world healthcare concepts and their semantic relationships, enabling structured knowledge representation, interoperability, and logical reasoning.
 
 The ontology covers core clinical entities such as patients, doctors, diseases, treatments, medications, appointments, hospitals, and medical records.  
-It is designed for academic purposes and demonstrates the use of **classes, object properties, data properties, individuals, and reasoning** in the healthcare domain.
+It is designed for academic purposes and demonstrates the use of **classes, object properties, data properties, individuals, and reasoning** in the healthcare domain. 
 
 
 <img width="1024" height="768" alt="Overall Architecture of the Ontology Asserted Hierarchy" src="Overall%20architecture.jpeg" />  
